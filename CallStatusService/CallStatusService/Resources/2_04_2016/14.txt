@@ -1,0 +1,5 @@
+555555555;NotAnswering;NotAnswering;Positive
+555555556;Positive
+555555557;NotAnswering;Negative
+555555554;NotAnswering;NotAnswering;Negative
+555555551;Negative
