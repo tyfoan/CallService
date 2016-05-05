@@ -56,6 +56,7 @@ namespace CallStatusService
             {
                 writer.Write(sb.ToString());
             }
+            Console.WriteLine(sb);
         }
 
     }

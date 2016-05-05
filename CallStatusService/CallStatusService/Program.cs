@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Service service = new Service(@"C:\Users\Александр\Documents\visual studio 2015\Projects\CallService\CallService\history task\1_04_2016\14.txt", 
-                @"C:\Users\Александр\Documents\visual studio 2015\Projects\CallService\CallService\history task\2_04_2016\14.txt");
+            Service service = new Service(@"../../Resources/1_04_2016/14.txt", @"../../Resources/2_04_2016/14.txt");
             service.DifferencesBetweenFiles();
         }
     }
