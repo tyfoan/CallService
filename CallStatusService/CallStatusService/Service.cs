@@ -17,30 +17,9 @@ namespace CallStatusService
             _previousFilePath = previousFilePath;
         }
 
-        public void Method()
+        public void DifferencesBetweenFiles()
         {
-            //try
-            //{
-            //    using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
-            //    {
-            //        string line;
-            //        while ((line = sr.ReadLine()) != null)
-            //        {
-            //            Console.WriteLine(line);
-            //        }
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    Console.WriteLine(e.Message);
-            //}
-
-            string fileA, fileB, fileC;
-            fileA = _previousFilePath;
-            fileB = _presentFilePath;
-            fileC = "result.txt";
-
-            string alphaFilePath = fileA;
+            string alphaFilePath = _previousFilePath;
 
             List<string> alphaFileContent = new List<string>();
 
@@ -53,7 +32,7 @@ namespace CallStatusService
                 }
             }
 
-            string betaFilePath = fileB;
+            string betaFilePath = _presentFilePath;
 
             StringBuilder sb = new StringBuilder();
 
@@ -72,7 +51,7 @@ namespace CallStatusService
                 }
             }
 
-            using (FileStream fs = new FileStream(fileC, FileMode.Create))
+            using (FileStream fs = new FileStream("result.txt", FileMode.Create))
             using (StreamWriter writer = new StreamWriter(fs))
             {
                 writer.Write(sb.ToString());
